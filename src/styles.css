@@ -1,0 +1,75 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@theme inline {
+  --font-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-navy: var(--navy);
+  --color-navy-foreground: var(--navy-foreground);
+  --color-evolv: var(--evolv);
+  --color-evolv-foreground: var(--evolv-foreground);
+  --color-mint: var(--mint);
+  --color-gold: var(--gold);
+}
+
+:root {
+  --navy: #1b3a5c;
+  --navy-foreground: #f7fafc;
+  --evolv: #1a5c45;
+  --evolv-foreground: #f8fffc;
+  --mint: #7ecec4;
+  --gold: #ef9f27;
+  --background: #ffffff;
+  --foreground: #1f2f3f;
+  --card: #ffffff;
+  --card-foreground: #1f2f3f;
+  --primary: var(--evolv);
+  --primary-foreground: var(--evolv-foreground);
+  --muted: #eef2f7;
+  --muted-foreground: #657487;
+  --accent: #e8f5f0;
+  --accent-foreground: var(--evolv);
+  --border: #dde4ec;
+  --input: #dde4ec;
+  --ring: var(--mint);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  body {
+    margin: 0;
+    background: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-mint);
+    outline-offset: 2px;
+  }
+}
+
+@utility surface-evolv {
+  background-color: #e8f5f0;
+}
+
+@utility surface-navy {
+  background-color: #eef2f7;
+}
